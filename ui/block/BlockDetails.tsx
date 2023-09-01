@@ -423,7 +423,7 @@ const BlockDetails = ({ query }: Props) => {
             </DetailsInfoItem>
           ) }
 
-          <DetailsInfoItem
+          {/* <DetailsInfoItem
             title="Difficulty"
             hint={ `Block difficulty for ${ validatorTitle }, used to calibrate block generation time` }
           >
@@ -438,7 +438,7 @@ const BlockDetails = ({ query }: Props) => {
             <Box whiteSpace="nowrap" overflow="hidden">
               <HashStringShortenDynamic hash={ BigNumber(data.total_difficulty).toFormat() }/>
             </Box>
-          </DetailsInfoItem>
+          </DetailsInfoItem> */}
 
           { sectionGap }
 

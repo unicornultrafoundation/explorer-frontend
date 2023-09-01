@@ -64,7 +64,7 @@ const BlocksTableItem = ({ data, isLoading, enableTimeIncrement }: Props) => {
           { data.size.toLocaleString() }
         </Skeleton>
       </Td>
-      <Td fontSize="sm">
+      {/* <Td fontSize="sm">
         <AddressLink
           type="address"
           alias={ data.miner.name }
@@ -74,7 +74,7 @@ const BlocksTableItem = ({ data, isLoading, enableTimeIncrement }: Props) => {
           maxW="100%"
           isLoading={ isLoading }
         />
-      </Td>
+      </Td> */}
       <Td isNumeric fontSize="sm">
         { data.tx_count > 0 ? (
           <Skeleton isLoaded={ !isLoading } display="inline-block">

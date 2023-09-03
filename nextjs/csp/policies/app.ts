@@ -54,6 +54,9 @@ export function app(): CspDev.DirectiveDescriptor {
 
       // hash of ColorModeScript
       '\'sha256-e7MRMmTzLsLQvIy1iizO1lXf7VWYoQ6ysj5fuUzvRwE=\'',
+
+      // Ugly hacks
+      KEY_WORDS.UNSAFE_INLINE,
     ],
 
     'style-src': [

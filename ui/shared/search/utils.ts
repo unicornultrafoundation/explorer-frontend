@@ -15,8 +15,8 @@ export type SearchResultAppItem = {
 
 export const searchCategories: Array<{id: Category; title: string }> = [
   { id: 'app', title: 'Apps' },
-  { id: 'token', title: 'Tokens (ERC-20)' },
-  { id: 'nft', title: 'NFTs (ERC-721 & 1155)' },
+  { id: 'token', title: 'Tokens (URC-20)' },
+  { id: 'nft', title: 'NFTs (URC-721 & 1155)' },
   { id: 'address', title: 'Addresses' },
   { id: 'public_tag', title: 'Public tags' },
   { id: 'transaction', title: 'Transactions' },
@@ -40,7 +40,7 @@ export function getItemCategory(item: SearchResultItem | SearchResultAppItem): C
       return 'address';
     }
     case 'token': {
-      if (item.token_type === 'ERC-20') {
+      if (item.token_type === 'URC-20') {
         return 'token';
       }
       return 'nft';

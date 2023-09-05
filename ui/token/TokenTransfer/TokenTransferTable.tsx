@@ -27,13 +27,13 @@ const TokenTransferTable = ({ data, top, showSocketInfo, socketInfoAlert, socket
     <Table variant="simple" size="sm" minW="950px">
       <Thead top={ top }>
         <Tr>
-          <Th width={ tokenType === 'ERC-1155' ? '60%' : '80%' }>Txn hash</Th>
+          <Th width={ tokenType === 'URC-1155' ? '60%' : '80%' }>Txn hash</Th>
           <Th width="164px">Method</Th>
           <Th width="160px">From</Th>
           <Th width="36px" px={ 0 }/>
           <Th width="218px" >To</Th>
-          { (tokenType === 'ERC-721' || tokenType === 'ERC-1155') && <Th width="20%" isNumeric={ tokenType === 'ERC-721' }>Token ID</Th> }
-          { (tokenType === 'ERC-20' || tokenType === 'ERC-1155') && (
+          { (tokenType === 'URC-721' || tokenType === 'URC-1155') && <Th width="20%" isNumeric={ tokenType === 'URC-721' }>Token ID</Th> }
+          { (tokenType === 'URC-20' || tokenType === 'URC-1155') && (
             <Th width="20%" isNumeric>
               <TruncatedValue value={ `Value ${ token?.symbol || '' }` } w="100%" verticalAlign="middle"/>
             </Th>

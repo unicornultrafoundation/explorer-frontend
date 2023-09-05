@@ -13,7 +13,7 @@ test('unnamed', async({ mount }) => {
   const data: TokenInfo = {
     address: '0x363574E6C5C71c343d7348093D84320c76d5Dd29',
     circulating_market_cap: '117629601.61913824',
-    type: 'ERC-20',
+    type: 'URC-20',
     symbol: 'xDAI',
     name: null,
     decimals: '18',
@@ -35,7 +35,7 @@ test('named', async({ mount }) => {
   const data: TokenInfo = {
     address: '0x363574E6C5C71c343d7348093D84320c76d5Dd29',
     circulating_market_cap: '117629601.61913824',
-    type: 'ERC-20',
+    type: 'URC-20',
     symbol: 'SHA',
     name: 'Shavuha token',
     decimals: '18',
@@ -58,7 +58,7 @@ test('with logo and long symbol', async({ mount, page }) => {
   const data: TokenInfo = {
     address: '0x363574E6C5C71c343d7348093D84320c76d5Dd29',
     circulating_market_cap: '117629601.61913824',
-    type: 'ERC-20',
+    type: 'URC-20',
     symbol: 'SHAAAAAAAAAAAAA',
     name: null,
     decimals: '18',

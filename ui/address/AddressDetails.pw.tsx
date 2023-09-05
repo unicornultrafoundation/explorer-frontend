@@ -19,9 +19,9 @@ import MockAddressPage from './testUtils/MockAddressPage';
 const ADDRESS_HASH = addressMock.hash;
 const API_URL_ADDRESS = buildApiUrl('address', { hash: ADDRESS_HASH });
 const API_URL_COUNTERS = buildApiUrl('address_counters', { hash: ADDRESS_HASH });
-const API_URL_TOKENS_ERC20 = buildApiUrl('address_tokens', { hash: ADDRESS_HASH }) + '?type=ERC-20';
-const API_URL_TOKENS_ERC721 = buildApiUrl('address_tokens', { hash: ADDRESS_HASH }) + '?type=ERC-721';
-const API_URL_TOKENS_ER1155 = buildApiUrl('address_tokens', { hash: ADDRESS_HASH }) + '?type=ERC-1155';
+const API_URL_TOKENS_ERC20 = buildApiUrl('address_tokens', { hash: ADDRESS_HASH }) + '?type=URC-20';
+const API_URL_TOKENS_ERC721 = buildApiUrl('address_tokens', { hash: ADDRESS_HASH }) + '?type=URC-721';
+const API_URL_TOKENS_ER1155 = buildApiUrl('address_tokens', { hash: ADDRESS_HASH }) + '?type=URC-1155';
 const hooksConfig = {
   router: {
     query: { hash: ADDRESS_HASH },

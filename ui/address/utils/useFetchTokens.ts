@@ -11,17 +11,17 @@ interface Props {
 export default function useFetchTokens({ hash }: Props) {
   const erc20query = useApiQuery('address_tokens', {
     pathParams: { hash },
-    queryParams: { type: 'ERC-20' },
+    queryParams: { type: 'URC-20' },
     queryOptions: { enabled: Boolean(hash), refetchOnMount: false },
   });
   const erc721query = useApiQuery('address_tokens', {
     pathParams: { hash },
-    queryParams: { type: 'ERC-721' },
+    queryParams: { type: 'URC-721' },
     queryOptions: { enabled: Boolean(hash), refetchOnMount: false },
   });
   const erc1155query = useApiQuery('address_tokens', {
     pathParams: { hash },
-    queryParams: { type: 'ERC-1155' },
+    queryParams: { type: 'URC-1155' },
     queryOptions: { enabled: Boolean(hash), refetchOnMount: false },
   });
 
@@ -33,15 +33,15 @@ export default function useFetchTokens({ hash }: Props) {
 
   const data = React.useMemo(() => {
     return {
-      'ERC-20': {
+      'URC-20': {
         items: erc20query.data?.items.map(calculateUsdValue) || [],
         isOverflow: Boolean(erc20query.data?.next_page_params),
       },
-      'ERC-721': {
+      'URC-721': {
         items: erc721query.data?.items.map(calculateUsdValue) || [],
         isOverflow: Boolean(erc721query.data?.next_page_params),
       },
-      'ERC-1155': {
+      'URC-1155': {
         items: erc1155query.data?.items.map(calculateUsdValue) || [],
         isOverflow: Boolean(erc1155query.data?.next_page_params),
       },

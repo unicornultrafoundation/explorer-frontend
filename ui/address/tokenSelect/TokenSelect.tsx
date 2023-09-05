@@ -35,7 +35,7 @@ const TokenSelect = ({ onClick }: Props) => {
   const addressQueryData = queryClient.getQueryData<Address>(addressResourceKey);
 
   const { data, isError, isLoading, refetch } = useFetchTokens({ hash: addressQueryData?.hash });
-  const tokensResourceKey = getResourceKey('address_tokens', { pathParams: { hash: addressQueryData?.hash }, queryParams: { type: 'ERC-20' } });
+  const tokensResourceKey = getResourceKey('address_tokens', { pathParams: { hash: addressQueryData?.hash }, queryParams: { type: 'URC-20' } });
   const tokensIsFetching = useIsFetching({ queryKey: tokensResourceKey });
 
   const handleTokenBalanceMessage: SocketMessage.AddressTokenBalance['handler'] = React.useCallback((payload) => {

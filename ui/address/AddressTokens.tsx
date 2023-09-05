@@ -55,7 +55,7 @@ const AddressTokens = () => {
   const erc20Query = useQueryWithPages({
     resourceName: 'address_tokens',
     pathParams: { hash },
-    filters: { type: 'ERC-20' },
+    filters: { type: 'URC-20' },
     scrollRef,
     options: {
       refetchOnMount: false,
@@ -66,7 +66,7 @@ const AddressTokens = () => {
   const erc721Query = useQueryWithPages({
     resourceName: 'address_tokens',
     pathParams: { hash },
-    filters: { type: 'ERC-721' },
+    filters: { type: 'URC-721' },
     scrollRef,
     options: {
       refetchOnMount: false,
@@ -77,7 +77,7 @@ const AddressTokens = () => {
   const erc1155Query = useQueryWithPages({
     resourceName: 'address_tokens',
     pathParams: { hash },
-    filters: { type: 'ERC-1155' },
+    filters: { type: 'URC-1155' },
     scrollRef,
     options: {
       refetchOnMount: false,
@@ -115,15 +115,15 @@ const AddressTokens = () => {
   }, [ hash, queryClient ]);
 
   const handleTokenBalancesErc20Message: SocketMessage.AddressTokenBalancesErc20['handler'] = React.useCallback((payload) => {
-    updateTokensData('ERC-20', payload);
+    updateTokensData('URC-20', payload);
   }, [ updateTokensData ]);
 
   const handleTokenBalancesErc721Message: SocketMessage.AddressTokenBalancesErc721['handler'] = React.useCallback((payload) => {
-    updateTokensData('ERC-721', payload);
+    updateTokensData('URC-721', payload);
   }, [ updateTokensData ]);
 
   const handleTokenBalancesErc1155Message: SocketMessage.AddressTokenBalancesErc1155['handler'] = React.useCallback((payload) => {
-    updateTokensData('ERC-1155', payload);
+    updateTokensData('URC-1155', payload);
   }, [ updateTokensData ]);
 
   const channel = useSocketChannel({
@@ -148,16 +148,16 @@ const AddressTokens = () => {
   });
 
   const tabs = [
-    { id: tokenTabsByType['ERC-20'], title: 'ERC-20', component: <ERC20Tokens tokensQuery={ erc20Query }/> },
-    { id: tokenTabsByType['ERC-721'], title: 'ERC-721', component: <ERC721Tokens tokensQuery={ erc721Query }/> },
-    { id: tokenTabsByType['ERC-1155'], title: 'ERC-1155', component: <ERC1155Tokens tokensQuery={ erc1155Query }/> },
+    { id: tokenTabsByType['URC-20'], title: 'URC-20', component: <ERC20Tokens tokensQuery={ erc20Query }/> },
+    { id: tokenTabsByType['URC-721'], title: 'URC-721', component: <ERC721Tokens tokensQuery={ erc721Query }/> },
+    { id: tokenTabsByType['URC-1155'], title: 'URC-1155', component: <ERC1155Tokens tokensQuery={ erc1155Query }/> },
   ];
 
   let pagination: PaginationParams | undefined;
 
-  if (tab === tokenTabsByType['ERC-1155']) {
+  if (tab === tokenTabsByType['URC-1155']) {
     pagination = erc1155Query.pagination;
-  } else if (tab === tokenTabsByType['ERC-721']) {
+  } else if (tab === tokenTabsByType['URC-721']) {
     pagination = erc721Query.pagination;
   } else {
     pagination = erc20Query.pagination;

@@ -71,7 +71,7 @@ const TokenTransferListItem = ({
           <CopyToClipboard text={ to.hash } isLoading={ isLoading }/>
         </Address>
       </Flex>
-      { value && (token.type === 'ERC-20' || token.type === 'ERC-1155') && (
+      { value && (token.type === 'URC-20' || token.type === 'URC-1155') && (
         <Flex columnGap={ 2 } w="100%">
           <Skeleton isLoaded={ !isLoading } flexShrink={ 0 } fontWeight={ 500 }>
             Value
@@ -82,7 +82,7 @@ const TokenTransferListItem = ({
           { token.symbol && <TruncatedValue isLoading={ isLoading } value={ token.symbol }/> }
         </Flex>
       ) }
-      { 'token_id' in total && (token.type === 'ERC-721' || token.type === 'ERC-1155') && (
+      { 'token_id' in total && (token.type === 'URC-721' || token.type === 'URC-1155') && (
         <TokenTransferNft
           hash={ token.address }
           id={ total.token_id }

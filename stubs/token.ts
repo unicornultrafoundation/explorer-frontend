@@ -6,7 +6,7 @@ import { BLOCK_HASH } from './block';
 import { TX_HASH } from './tx';
 import { generateListStub } from './utils';
 
-export const TOKEN_INFO_ERC_20: TokenInfo<'ERC-20'> = {
+export const TOKEN_INFO_ERC_20: TokenInfo<'URC-20'> = {
   address: ADDRESS_HASH,
   circulating_market_cap: '117629601.61913824',
   decimals: '18',
@@ -15,20 +15,20 @@ export const TOKEN_INFO_ERC_20: TokenInfo<'ERC-20'> = {
   name: 'Stub Token (goerli)',
   symbol: 'STUB',
   total_supply: '60000000000000000000000',
-  type: 'ERC-20',
+  type: 'URC-20',
   icon_url: null,
 };
 
-export const TOKEN_INFO_ERC_721: TokenInfo<'ERC-721'> = {
+export const TOKEN_INFO_ERC_721: TokenInfo<'URC-721'> = {
   ...TOKEN_INFO_ERC_20,
   circulating_market_cap: null,
-  type: 'ERC-721',
+  type: 'URC-721',
 };
 
-export const TOKEN_INFO_ERC_1155: TokenInfo<'ERC-1155'> = {
+export const TOKEN_INFO_ERC_1155: TokenInfo<'URC-1155'> = {
   ...TOKEN_INFO_ERC_20,
   circulating_market_cap: null,
-  type: 'ERC-1155',
+  type: 'URC-1155',
 };
 
 export const TOKEN_COUNTERS: TokenCounters = {
@@ -77,9 +77,9 @@ export const TOKEN_TRANSFER_ERC_1155: TokenTransfer = {
 
 export const getTokenTransfersStub = (type?: TokenType, pagination: TokenTransferPagination | null = null): TokenTransferResponse => {
   switch (type) {
-    case 'ERC-721':
+    case 'URC-721':
       return generateListStub<'token_transfers'>(TOKEN_TRANSFER_ERC_721, 50, { next_page_params: pagination });
-    case 'ERC-1155':
+    case 'URC-1155':
       return generateListStub<'token_transfers'>(TOKEN_TRANSFER_ERC_1155, 50, { next_page_params: pagination });
     default:
       return generateListStub<'token_transfers'>(TOKEN_TRANSFER_ERC_20, 50, { next_page_params: pagination });

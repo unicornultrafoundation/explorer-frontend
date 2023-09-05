@@ -17,7 +17,7 @@ const TokenSelectItem = ({ data }: Props) => {
 
   const secondRow = (() => {
     switch (data.token.type) {
-      case 'ERC-20': {
+      case 'URC-20': {
         const tokenDecimals = Number(data.token.decimals) || 18;
         const text = `${ BigNumber(data.value).dividedBy(10 ** tokenDecimals).toFormat(2) } ${ data.token.symbol || '' }`;
 
@@ -28,11 +28,11 @@ const TokenSelectItem = ({ data }: Props) => {
           </>
         );
       }
-      case 'ERC-721': {
+      case 'URC-721': {
         const text = `${ BigNumber(data.value).toFormat() } ${ data.token.symbol || '' }`;
         return <TruncatedValue value={ text }/>;
       }
-      case 'ERC-1155': {
+      case 'URC-1155': {
         return (
           <>
             <chakra.span textOverflow="ellipsis" overflow="hidden" mr={ 6 }>

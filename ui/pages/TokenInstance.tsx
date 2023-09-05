@@ -56,7 +56,7 @@ const TokenInstanceContent = () => {
     options: {
       enabled: Boolean(hash && id && (!tab || tab === 'token_transfers') && !tokenInstanceQuery.isPlaceholderData && tokenInstanceQuery.data),
       placeholderData: generateListStub<'token_instance_transfers'>(
-        tokenInstanceQuery.data?.token.type === 'ERC-1155' ? tokenStubs.TOKEN_TRANSFER_ERC_1155 : tokenStubs.TOKEN_TRANSFER_ERC_721,
+        tokenInstanceQuery.data?.token.type === 'URC-1155' ? tokenStubs.TOKEN_TRANSFER_ERC_1155 : tokenStubs.TOKEN_TRANSFER_ERC_721,
         10,
         { next_page_params: null },
       ),

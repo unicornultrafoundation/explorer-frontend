@@ -18,15 +18,15 @@ export type Erc1155TotalPayload = {
 
 export type TokenTransfer = (
   {
-    token: TokenInfo<'ERC-20'>;
+    token: TokenInfo<'URC-20'>;
     total: Erc20TotalPayload;
   } |
   {
-    token: TokenInfo<'ERC-721'>;
+    token: TokenInfo<'URC-721'>;
     total: Erc721TotalPayload;
   } |
   {
-    token: TokenInfo<'ERC-1155'>;
+    token: TokenInfo<'URC-1155'>;
     total: Erc1155TotalPayload;
   }
 ) & TokenTransferBase

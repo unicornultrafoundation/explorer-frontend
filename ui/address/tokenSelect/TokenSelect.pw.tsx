@@ -13,9 +13,9 @@ import MockAddressPage from 'ui/address/testUtils/MockAddressPage';
 import TokenSelect from './TokenSelect';
 
 const ASSET_URL = tokenInfoERC20a.icon_url as string;
-const TOKENS_ERC20_API_URL = buildApiUrl('address_tokens', { hash: '1' }) + '?type=ERC-20';
-const TOKENS_ERC721_API_URL = buildApiUrl('address_tokens', { hash: '1' }) + '?type=ERC-721';
-const TOKENS_ER1155_API_URL = buildApiUrl('address_tokens', { hash: '1' }) + '?type=ERC-1155';
+const TOKENS_ERC20_API_URL = buildApiUrl('address_tokens', { hash: '1' }) + '?type=URC-20';
+const TOKENS_ERC721_API_URL = buildApiUrl('address_tokens', { hash: '1' }) + '?type=URC-721';
+const TOKENS_ER1155_API_URL = buildApiUrl('address_tokens', { hash: '1' }) + '?type=URC-1155';
 const ADDRESS_API_URL = buildApiUrl('address', { hash: '1' });
 const hooksConfig = {
   router: {
@@ -109,13 +109,13 @@ test('sort', async({ mount, page }) => {
     { hooksConfig },
   );
   await page.getByRole('button', { name: /select/i }).click();
-  await page.locator('a[aria-label="Sort ERC-20 tokens"]').click();
+  await page.locator('a[aria-label="Sort URC-20 tokens"]').click();
 
   await expect(page).toHaveScreenshot({ clip: CLIPPING_AREA });
 
   await page.mouse.move(100, 200);
   await page.mouse.wheel(0, 1000);
-  await page.locator('a[aria-label="Sort ERC-1155 tokens"]').click();
+  await page.locator('a[aria-label="Sort URC-1155 tokens"]').click();
 
   await expect(page).toHaveScreenshot({ clip: CLIPPING_AREA });
 });

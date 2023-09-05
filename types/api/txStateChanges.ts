@@ -21,13 +21,13 @@ type ChangeDirection = 'from' | 'to';
 
 export interface TxStateChangeTokenErc20 {
   type: 'token';
-  token: TokenInfo<'ERC-20'>;
+  token: TokenInfo<'URC-20'>;
   change: string;
 }
 
 export interface TxStateChangeTokenErc721 {
   type: 'token';
-  token: TokenInfo<'ERC-721'>;
+  token: TokenInfo<'URC-721'>;
   change: Array<{
     direction: ChangeDirection;
     total: Erc721TotalPayload;
@@ -36,7 +36,7 @@ export interface TxStateChangeTokenErc721 {
 
 export interface TxStateChangeTokenErc1155 {
   type: 'token';
-  token: TokenInfo<'ERC-1155'>;
+  token: TokenInfo<'URC-1155'>;
   change: string;
   token_id: string;
 }

@@ -74,7 +74,7 @@ const TokenDetails = ({ tokenQuery }: Props) => {
 
   let totalSupplyValue;
 
-  if (type === 'ERC-20') {
+  if (type === 'URC-20') {
     const totalValue = totalSupply ? getCurrencyValue({ value: totalSupply, accuracy: 3, accuracyUsd: 2, exchangeRate, decimals }) : undefined;
     totalSupplyValue = totalValue?.valueStr;
   } else {

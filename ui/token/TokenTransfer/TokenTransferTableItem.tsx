@@ -95,13 +95,13 @@ const TokenTransferTableItem = ({
           <CopyToClipboard text={ to.hash } isLoading={ isLoading }/>
         </Address>
       </Td>
-      { (token.type === 'ERC-721' || token.type === 'ERC-1155') && (
+      { (token.type === 'URC-721' || token.type === 'URC-1155') && (
         <Td>
           { 'token_id' in total ? (
             <TokenTransferNft
               hash={ token.address }
               id={ total.token_id }
-              justifyContent={ token.type === 'ERC-721' ? 'end' : 'start' }
+              justifyContent={ token.type === 'URC-721' ? 'end' : 'start' }
               isDisabled={ Boolean(tokenId && tokenId === total.token_id) }
               isLoading={ isLoading }
             />
@@ -109,7 +109,7 @@ const TokenTransferTableItem = ({
           }
         </Td>
       ) }
-      { (token.type === 'ERC-20' || token.type === 'ERC-1155') && (
+      { (token.type === 'URC-20' || token.type === 'URC-1155') && (
         <Td isNumeric verticalAlign="top">
           <Skeleton isLoaded={ !isLoading } my="7px">
             { 'value' in total && BigNumber(total.value).div(BigNumber(10 ** Number(total.decimals))).dp(8).toFormat() }

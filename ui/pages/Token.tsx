@@ -115,7 +115,7 @@ const TokenPageContent = () => {
   }, [ tokenQuery.data, tokenQuery.isPlaceholderData ]);
 
   const hasData = (tokenQuery.data && !tokenQuery.isPlaceholderData) && (contractQuery.data && !contractQuery.isPlaceholderData);
-  const hasInventoryTab = tokenQuery.data?.type === 'ERC-1155' || tokenQuery.data?.type === 'ERC-721';
+  const hasInventoryTab = tokenQuery.data?.type === 'URC-1155' || tokenQuery.data?.type === 'URC-721';
 
   const transfersQuery = useQueryWithPages({
     resourceName: 'token_transfers',
@@ -169,7 +169,7 @@ const TokenPageContent = () => {
   const contractTabs = useContractTabs(contractQuery.data);
 
   const tabs: Array<RoutedTab> = [
-    (tokenQuery.data?.type === 'ERC-1155' || tokenQuery.data?.type === 'ERC-721') ?
+    (tokenQuery.data?.type === 'URC-1155' || tokenQuery.data?.type === 'URC-721') ?
       { id: 'inventory', title: 'Inventory', component: <TokenInventory inventoryQuery={ inventoryQuery }/> } :
       undefined,
     { id: 'token_transfers', title: 'Token transfers', component: <TokenTransfer transfersQuery={ transfersQuery } token={ tokenQuery.data }/> },

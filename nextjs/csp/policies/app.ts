@@ -51,9 +51,13 @@ export function app(): CspDev.DirectiveDescriptor {
       // next.js generates and rebuilds source maps in dev using eval()
       // https://github.com/vercel/next.js/issues/14221#issuecomment-657258278
       config.app.isDev ? KEY_WORDS.UNSAFE_EVAL : '',
+      config.app.isDev ? KEY_WORDS.UNSAFE_INLINE: '',
 
       // hash of ColorModeScript
-      '\'sha256-e7MRMmTzLsLQvIy1iizO1lXf7VWYoQ6ysj5fuUzvRwE=\'',
+      // '\'sha256-e7MRMmTzLsLQvIy1iizO1lXf7VWYoQ6ysj5fuUzvRwE=\'',
+
+      // Ugly hacks
+      KEY_WORDS.UNSAFE_INLINE,
     ],
 
     'style-src': [

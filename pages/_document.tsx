@@ -42,14 +42,14 @@ class MyDocument extends Document {
           <link rel="icon" sizes="16x16" type="image/png"href="/static/favicon-16x16.png"/>
           <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"/>
           <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5"/>
-          <meta property="og:title" content="Unicorn Ultra Network Explorer"/>
+          <meta property="og:title" content="U2U Network Explorer"/>
           <meta
             property="og:description"
             // eslint-disable-next-line max-len
-            content="Unicorn Ultra powers the construction of global blockchain unicorn chains, assist an ecosystem, promote decentralization, and proactive investment community growth for community investors and businesses."
+            content="U2U powers the construction of global blockchain unicorn chains, assist an ecosystem, promote decentralization, and proactive investment community growth for community investors and businesses."
           />
           <meta property="og:image" content={ config.app.baseUrl + '/static/og.png' }/>
-          <meta property="og:site_name" content="Unicorn Ultra"/>
+          <meta property="og:site_name" content="U2U"/>
           <meta property="og:type" content="website"/>
           <meta name="twitter:card" content="summary_large_image"/>
           <meta property="twitter:image" content={ config.app.baseUrl + '/static/og_twitter.png' }/>

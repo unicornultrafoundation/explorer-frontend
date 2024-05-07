@@ -27,9 +27,6 @@ class MyDocument extends Document {
   }
 
   render() {
-    // @ts-ignore
-    // @ts-ignore
-    // @ts-ignore
     return (
       <Html lang="en">
         <Head>

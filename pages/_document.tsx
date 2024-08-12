@@ -42,17 +42,6 @@ class MyDocument extends Document {
           <link rel="icon" sizes="16x16" type="image/png"href="/static/favicon-16x16.png"/>
           <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png"/>
           <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5"/>
-
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-2KLQQ02B7R"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-2KLQQ02B7R');
-          </script>
-
-
           <meta property="og:title" content="U2U Network Explorer"/>
           <meta
             property="og:description"

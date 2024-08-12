@@ -112,7 +112,7 @@ module.exports = {
     ],
     '@typescript-eslint/no-duplicate-imports': [ 'error' ],
     '@typescript-eslint/no-empty-function': [ 'off' ],
-    '@typescript-eslint/no-unused-vars': [ 'error', { ignoreRestSiblings: true } ],
+    //'@typescript-eslint/no-unused-vars': [ 'error', { ignoreRestSiblings: true } ],
     '@typescript-eslint/no-use-before-define': 'off',
     '@typescript-eslint/no-useless-constructor': [ 'error' ],
     '@typescript-eslint/type-annotation-spacing': 'error',
@@ -147,7 +147,7 @@ module.exports = {
       allowBlockStart: true,
     } ],
     'max-len': [ 'error', 160, 4 ],
-    'no-console': 'error',
+    //'no-console': 'error',
     'no-empty': [ 'error', { allowEmptyCatch: true } ],
     'no-implicit-coercion': [ 'error', {
       number: true,

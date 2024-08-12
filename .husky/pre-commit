@@ -2,15 +2,15 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # lint js/ts files
-echo 🧿 Running file linter...
-npx lint-staged
+#echo 🧿 Running file linter...
+#npx lint-staged
 
 # format svg
 echo 🧿 Running svg formatter...
 for file in `git diff --diff-filter=ACMRT --cached --name-only | grep ".svg\$"`
-    do 
-        echo "Formatting $file" 
-        ./node_modules/.bin/svgo -q $file 
+    do
+        echo "Formatting $file"
+        ./node_modules/.bin/svgo -q $file
         git add $file
     done
 

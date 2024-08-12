@@ -48,11 +48,11 @@ class MyDocument extends Document {
             // eslint-disable-next-line max-len
             content="U2U powers the construction of global blockchain unicorn chains, assist an ecosystem, promote decentralization, and proactive investment community growth for community investors and businesses."
           />
-          <meta property="og:image" content={ config.app.baseUrl + '/static/og.png' }/>
+          <meta property="og:image" content={ config.app.baseUrl + '/static/thumb.png' }/>
           <meta property="og:site_name" content="U2U"/>
           <meta property="og:type" content="website"/>
           <meta name="twitter:card" content="summary_large_image"/>
-          <meta property="twitter:image" content={ config.app.baseUrl + '/static/og_twitter.png' }/>
+          <meta property="twitter:image" content={ config.app.baseUrl + '/static/thumb_twitter.png' }/>
 
         </Head>
         <body>

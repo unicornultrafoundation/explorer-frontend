@@ -200,17 +200,6 @@ const BlockDetails = ({ query }: Props) => {
           </Skeleton>
         </DetailsInfoItem>
       ) }
-      <DetailsInfoItem
-        title={ config.chain.verificationType === 'validation' ? 'Validated by' : 'Mined by' }
-        hint="A block producer who successfully included the block onto the blockchain"
-        columnGap={ 1 }
-        isLoading={ isPlaceholderData }
-      >
-        <AddressLink type="address" hash={ data.miner.hash } isLoading={ isPlaceholderData }/>
-        { data.miner.name && <Text>{ `(${ capitalize(validatorTitle) }: ${ data.miner.name })` }</Text> }
-        { /* api doesn't return the block processing time yet */ }
-        { /* <Text>{ dayjs.duration(block.minedIn, 'second').humanize(true) }</Text> */ }
-      </DetailsInfoItem>
       { !config.features.rollup.isEnabled && !totalReward.isEqualTo(ZERO) && !config.UI.views.block.hiddenFields?.total_reward && (
         <DetailsInfoItem
           title="Block reward"

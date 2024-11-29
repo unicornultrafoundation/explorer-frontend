@@ -123,12 +123,12 @@ export default function useNavItems(): ReturnType {
       {
         text: 'RPC API',
         icon: rpcIcon,
-        url: 'https://docs.blockscout.com/for-users/api/rpc-endpoints',
+        url: 'https://docs.u2u.xyz/services/explorer/explorer-api',
       },
       {
         text: 'Eth RPC API',
         icon: rpcIcon,
-        url: ' https://docs.blockscout.com/for-users/api/eth-rpc',
+        url: 'https://docs.u2u.xyz/services/rpc/ethereum-api-methods',
       },
     ].filter(Boolean);
 

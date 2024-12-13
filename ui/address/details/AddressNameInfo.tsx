@@ -41,8 +41,8 @@ const AddressNameInfo = ({ data, isLoading }: Props) => {
   if (data.name) {
     return (
       <DetailsInfoItem
-        title="Validator name"
-        hint="The name of the validator"
+        title="Address name"
+        hint="The name of the address"
         isLoading={ isLoading }
       >
         <Skeleton isLoaded={ !isLoading }>
